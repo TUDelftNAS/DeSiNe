@@ -1,0 +1,52 @@
+############################################################################
+##                                                                        ##
+##   Global Makefile                                                      ##
+##   version 1.0                                                          ##
+############################################################################
+
+# empty target to prevent accidental use
+phony:
+	@echo "Run 'make desine' to build.
+
+# PACKAGES is a list of all packages
+PACKAGES=Algorithm LinkCostFunction LinkStateUpdate Main Network Parameter RandomVariables IO Utils prf samcra
+
+# Local compiler flags/directives
+LOCALCFLAGS=
+LOCALCXXFLAGS=
+
+# Include other makefiles
+include $(SRC_DIR)/Algorithm/makefile
+include $(SRC_DIR)/LinkCostFunction/makefile
+include $(SRC_DIR)/LinkStateUpdate/makefile
+include $(SRC_DIR)/Main/makefile
+include $(SRC_DIR)/Network/makefile
+include $(SRC_DIR)/Parameter/makefile
+include $(SRC_DIR)/RandomVariables/makefile
+include $(SRC_DIR)/IO/makefile
+include $(SRC_DIR)/Utils/makefile
+include $(SRC_DIR)/prf/makefile
+include $(SRC_DIR)/samcra/makefile
+
+# Compiler and flags
+CXX=g++
+CC=gcc
+
+# Debug directives
+DEBUGS=-Wall -DNO_TIMER -DNO_TRACES #-DNO_THROUGHPUT -DNO_STD_DEV
+
+# Includes and libraries
+#ISUBDIRS=$(PACKAGES:%=-I$(SRC_DIR)/%)
+ISUBDIRS=-I$(SRC_DIR)
+TMP_PKGS=$(PACKAGES:Main=) # exclude Main
+ALL_OBJS=$(TMP_PKGS:%=$(OBJ_DIR)/%/*.o)
+
+# Optimization Flags
+FLAGS=-O3 -funroll-loops -finline-functions -fexpensive-optimizations
+
+# Compiler settings
+CFLAGS=$(FLAGS)
+CXXFLAGS=$(DEBUGS) $(FLAGS) $(ISUBDIRS)
+
+# Linker settings
+LXXFLAGS=$(DEBUGS) $(FLAGS) $(ISUBDIRS) -L$(OBJ_DIR) -lm

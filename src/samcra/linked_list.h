@@ -1,0 +1,10 @@
+int length_array();
+void putdata();
+int getdata();
+void insertdata();
+int length_vector();
+void putdatad();
+double getdatad();
+void insertdatad();
+void delete_array();
+void delete_vector();

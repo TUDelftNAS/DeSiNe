@@ -1,0 +1,92 @@
+# Input parameter file by Tom Kleiberg (Jun 3, 2004)
+# number of flows, number of warmup flows and number of iterations
+Flows 4000
+Warmup 100
+Iterations 10
+
+# Topology file name (no whitespaces) or Random Graph parameters
+# Adjancency List
+#	"Adjacency","<filename>"
+# Barabasi-Albert Random Graph
+#	"Barabasi","<nodes>","<m0>","[<m>]"
+# Erdos-Renyi Random Graph
+#	"Erdos","<nodes>","<probability>"
+# Topology stored on file
+#	"File","<filename>"
+# Full Mesh
+#	"Full","<nodes>"
+# Two-dimensional grid
+#	"Grid2D","<z1>","<z2>"
+# Random Graph
+#	"Random","nodes","links"
+
+# example
+# Topology File topology_big.inf
+Topology Erdos 100 0.06
+
+
+
+# Random graph link probability <begin>  <end>  <step>
+# for each probability it will create a separate set of results
+Lcapacity C 100
+
+# Log options
+# LogTypeIgor produces an ipf and bin file that can be loaded directly into Igor
+# Pro. The bin file contains data in a binary format.
+LogDir .
+# LogType LogTypeIgor
+
+# Seed for the random generator, must be 0 or larger. In case seed 0, a random
+# seed is choosen based on the current time
+Seed 1
+
+# Endpoints: 'U' means uniformly chosen source and dest, 'E' means exponentially
+# chosen source and dest
+Endpoints U
+
+# Inter-arrival time between two successive flow requests
+Farrival E 10
+
+# Flow Duration
+Fduration E 250
+
+# Requested bandwidth
+Fbandwidth U 10 50
+
+# QoS constraints
+QoSCons U 0 20
+QoSCons U 0 20
+
+
+# Algorithms that are implemented
+# New MIRA "NewMIRA"
+# S-MIRA "MI-PA"
+# Shortest Path "SP"
+# Widest Shortest Path "WSP"
+# SAMCRA "SAMCRA"
+# SAMCRA-B "SAMCRA-B"
+# SAMCRA-a "SAMCRA_after"
+# "TE-DB"
+
+# Linkcost functions
+# Inverse link capacity "Inverse"
+# .75  "PowerDot75"
+# Delta "Delta"
+# Delta3 "Delta3"
+# Square Sin "SquareSin"
+# Minimum delay "MinDelay"
+# Minimum hop "MinHop"
+
+# example
+Algorithm WSP MinHop
+
+# current used link state update policy
+# "Moving_Average_Relative <window_size> <threshold>"
+# "Moving_Average_Absolute <window_size> <threshold>"
+# "Moving_Average_class <window_size> <growth_factor> <bandw_base>"
+# "Period <period>"
+# "Holddown_Timer_class <period> <growth_factor> <bandw_base>"
+# "Holddown_Timer_threshold <period> <threshold>"
+
+# example
+LsupdateInfo Period 50
