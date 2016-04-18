@@ -17,6 +17,7 @@
 #include "IO/Tag.h"
 #include "Parameter/ParamsReader.h"
 #include "Utils/TraceManager.h"
+#include <cstdlib>
 #include <string>
 using std::string;
 

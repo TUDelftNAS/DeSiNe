@@ -22,7 +22,6 @@
 #include "Network/AbstractNetworkElementVisitor.h"
 #include "Network/Link.h"
 #include "Network/LinkList.h"
-#include "Network/TopologyFactory.h"
 #include "RandomVariables/RandomVar.h"
 #include "Utils/IllegalOperationException.h"
 #include "Utils/TraceManager.h"

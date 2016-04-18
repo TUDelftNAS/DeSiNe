@@ -30,6 +30,7 @@
 #include "Network/FlowManager.h"
 #include "Network/Path.h"
 #include "Network/Topology.h"
+#include "Network/TopologyFactory.h"
 #include "Parameter/Parameters.h"
 #include "Utils/Time.h"
 #include "Utils/Types.h"

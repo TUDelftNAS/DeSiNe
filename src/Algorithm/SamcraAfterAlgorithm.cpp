@@ -23,6 +23,7 @@
 #include "Utils/TraceManager.h"
 #include "Utils/Utils.h"
 
+#include <cstdlib>
 
 extern "C" void samcrapath(int,int,int **,int *,double ***,
                            int,double *,int,int *,int *,int *,int *);

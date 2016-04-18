@@ -15,6 +15,7 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include <typeinfo>
 using std::endl;
 using std::ofstream;
 using std::string;

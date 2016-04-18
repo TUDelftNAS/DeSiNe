@@ -7,6 +7,7 @@ F.A. Kuipers 18/02/2000
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include <time.h>
 #include "samcra_util.h"

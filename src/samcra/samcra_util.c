@@ -1,6 +1,8 @@
 #ifndef _NR_END
 #define _NR_END 1
 
+#include <stdlib.h>
+
 int *c_ivector(nl,nh)
 long nh,nl;
 /* allocate an int vector with subscript range v[nl..nh] */

@@ -41,8 +41,8 @@ class Link : public AbstractNetworkElement
 
     // Constanst(s)
     public:
-    static const double METRIC_MIN = 1.0/DBL_MAX; // to prevent metric to be 0
-    static const double METRIC_MAX = DBL_MAX;
+    static const double METRIC_MIN;
+    static const double METRIC_MAX;
 
     // Variable(s)
     private:

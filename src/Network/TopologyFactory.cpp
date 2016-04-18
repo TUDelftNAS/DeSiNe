@@ -19,6 +19,7 @@
 #include <deque>
 #include <set>
 #include <string>
+#include <cstdlib>
 #include <cmath>
 using std::deque;
 using std::string;

@@ -59,6 +59,7 @@ void decrease_key(heap,x,k)
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include "samcra_util.h"
 
