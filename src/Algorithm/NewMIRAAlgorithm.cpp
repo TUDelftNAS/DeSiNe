@@ -26,6 +26,8 @@
 #include "Utils/Utils.h"
 #include "prf/types_pr.h"
 #include <cmath>
+#include <cstdio>
+#include <cstdlib>
 #include <cstring>
 using Types::IntVector;
 

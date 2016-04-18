@@ -17,6 +17,7 @@
 #include "IO/Tag.h"
 #include "Utils/TraceManager.h"
 #include "Utils/Utils.h"
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <sstream>

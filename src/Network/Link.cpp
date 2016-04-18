@@ -28,6 +28,8 @@ using Types::usi;
 
 
 // Constanst(s)
+const double Link::METRIC_MIN = 1.0/DBL_MAX; // to prevent metric to be 0
+const double Link::METRIC_MAX = DBL_MAX;
 
 // Variable(s)
 

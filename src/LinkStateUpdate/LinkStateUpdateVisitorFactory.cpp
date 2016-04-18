@@ -23,6 +23,7 @@
 #include "LinkStateUpdate/ClassHDTimerLSUpdateVisitor.h"
 #include "LinkStateUpdate/ThresholdHDTimerLSUpdateVisitor.h"
 #include "Utils/TraceManager.h"
+#include <cstdlib>
 #include <string>
 using std::string;
 

@@ -19,11 +19,11 @@
 #include "Network/LinkList.h"
 #include "Network/Path.h"
 #include "Network/Topology.h"
-#include "Utils/TString.h"
 #include "Utils/Timer.h"
 #include "Utils/TraceManager.h"
 #include "Utils/Utils.h"
 
+#include <cstdlib>
 
 extern "C" void samcra2path(int,int,int **,int *,double ***,
                            int,double *,int,int *,int *,int *,int *);

@@ -23,6 +23,8 @@
 #include "Utils/TraceManager.h"
 #include "Utils/Types.h"
 #include "Utils/Utils.h"
+#include <cstdlib>
+#include <cstring>
 #include <new>
 #include <fstream>
 using std::set_new_handler;

@@ -23,7 +23,7 @@
 #include "Utils/TraceManager.h"
 #include "Utils/Utils.h"
 
-
+#include <cstdlib>
 
 extern "C" void tamcrapath(int,int,int **,int *,double ***,int,double *,
                            int,int,int **,int *,int *,int *);

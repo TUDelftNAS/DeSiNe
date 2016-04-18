@@ -26,6 +26,7 @@
 #include "IO/Tag.h"
 #include "Utils/TraceManager.h"
 
+#include <cstdlib>
 
 // Constanst(s)
 

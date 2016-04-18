@@ -22,6 +22,7 @@
 #include "RandomVariables/RandomVar.h"
 #include "RandomVariables/UniformVar.h"
 #include "Utils/Types.h"
+#include <cstdlib>
 #include <iostream>
 #include <string>
 using std::cerr;
